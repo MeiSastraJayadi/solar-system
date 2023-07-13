@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-import starTexture from '../img/starTexture.jpg';
+import starTexture from '../img/starTexture.png';
 import Sun from '../img/Sun.jpg';
 import Mercury from '../img/Mercury.jpg';
 import Saturn from '../img/Saturn.jpg';
@@ -96,6 +96,9 @@ scene.add(venus.objPath)
 const earth = createObj(5, 16, 16, 100, Earth);
 scene.add(earth.objPath);
 
+const mars = createObj(5, 15, 15, 120, Mars);
+scene.add(mars.objPath);
+
 const jupiter = createObj(30, 80, 80, 180, Jupiter);
 scene.add(jupiter.objPath);
 
@@ -128,6 +131,7 @@ function animate(time) {
   mercury.obj.rotateY(0.002);
   venus.obj.rotateY(0.02);
   earth.obj.rotateY(0.009);
+  mars.obj.rotateY(0.01);
   jupiter.obj.rotateY(0.06);
   neptune.obj.rotateY(0.006);
   pluto.obj.rotateY(0.01);
@@ -137,6 +141,7 @@ function animate(time) {
   venus.objPath.rotateY(0.007);
   saturn.objPath.rotateY(0.001);
   earth.objPath.rotateY(0.005)
+  mars.objPath.rotateY(0.002)
   jupiter.objPath.rotateY(0.002)
   uranus.objPath.rotateY(0.00097);
   neptune.objPath.rotateY(0.00087);
